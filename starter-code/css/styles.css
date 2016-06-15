@@ -30,48 +30,10 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+* {
+	box-sizing: border-box;
 }
 
-
-/* Grid */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: 1px solid red;
-}
-
-
-/* Clearfix */
-.row::after {
-    content: "";
-    clear: both;
-    display: block;
-}
 
 
 /* Base */
@@ -80,24 +42,267 @@ html {
 }
 .header {
     background-color: #9933cc;
-    color: #ffffff;
+    color: #000;
     padding: 15px;
 }
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.menu li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color :#33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-.menu li:hover {
-    background-color: #0099cc;
-}
+
 
 
 /* About Page */
+#about-page {
+	background-color: #fff;
+	line-height: 1.43;
+	width: 100%;
+	height: 100%;
+	font-family: "Poppins", arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    overflow-x: hidden;
+}
+
+.navigation {
+	min-height: 50px;
+	margin-bottom: 20px;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 20px 0;
+	transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+
+}
+.navigation #initials {
+	display: inline;
+	height: 50px;
+	padding: 50px 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+}
+.navigation #initials a {
+	text-decoration: none;
+	color: #000;
+}
+.navigation #initials a span {
+	font-size: 2.5em;
+	font-weight: 700;
+}
+#nav-links {
+	float: right;
+}
+#nav-links a {
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+	line-height: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #000;
+	font-family: "Poppins", arial, sans-serif;
+	font-size: 14px;
+	transition: 0.5s ease-in-out, padding 0.5s ease-in-out;
+	text-decoration: none;
+	font-weight: 500;
+}
+#nav-links a:hover {
+	color: #FF5722;
+}
+#nav-links ul {
+	float: left;
+	margin: 0;
+}
+ul li {
+	position: relative;
+	display: inline;
+	float: left;
+	padding: 0 10px;
+}
+
+.home {
+	display: table;
+	width: 100%;
+	height: 1000px;
+	padding: 100px 0;
+	text-align: center;
+	background-color: #FF5722;
+}
+.home-content {
+	vertical-align: middle;
+	height: 100%;
+	display: table-cell;
+}
+.home-content h1 {
+	font-weight: 700;
+    font-size: 5em;
+    color: #000;
+}
+.home-content p {
+	font-weight: 300;
+	font-size: 2.2em;
+	color: rgba(0, 0, 0, 0.75);
+	margin: 0 0 35px;
+}
+.scroll-indicator {
+	display: block;
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.125em;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.about-section {
+	background: #fff;
+
+}
+.about-section .info {
+	width: 50%;
+	display: inline-block;
+	padding: 10% 0 10% 10%;
+}
+.about-section .info h2 {
+	font-weight: 700;
+	font-size: 2.7em;
+	color: #FF5722;
+}
+.about-section .info h3 {
+	font-weight: 700;
+	font-size: 2em;
+	color: #FF5722;
+}
+.about-section .info p {
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.8;
+	text-align: justify;
+}
+.about-section .img-section {
+	float: right;
+	display: inline-block;
+	padding: 10% 10% 10% 0;
+
+}
+.about-section img {
+	height: auto;
+	display: inline-block;
+	max-width: 300px;
+	margin-top: 10px;
+	border-radius: 150px;
+
+
+}
+.about-section #portfolio-link  {
+	font-weight: 700;
+	font-size: 2.4em;
+	color: #FF5722;
+	padding-left: 45px;
+	text-decoration: none;
+
+}
+.about-section #portfolio-link:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+	.about-section .info {
+		width: 100%;
+		padding: 10%;
+	}
+}
+
+
+/* Portfolio Section */
+.portfolio-section {
+	background: #000;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Poppins", arial, sans-serif;
+	font-size: 2em;
+	font-weight: 500;
+	padding: 200px 0;
+
+}
+.portfolio-section h2 {
+	padding: 0 0 40px;
+}
+.portfolio-section #project1 {
+	height: 400px;
+	width: 80%;
+	margin: 0 auto;
+	background-image: url("../images/citipix-deliverable.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.portfolio-section #project1 .description {
+	position:relative;
+	top: 120px;
+	left:0;
+	background: #000;
+	color: #FF5722;
+	font-family: "Poppins", arial, sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	padding: 20px 0;
+	visibility:hidden;
+}
+.portfolio-section #project1:hover .description {
+	visibility: visible;
+}
+
+.portfolio-section #project2 {
+	height: 400px;
+	width: 80%;
+	margin: 50px auto;
+	background-image: url("../images/relaxr-deliverable.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.portfolio-section #project2 .description {
+	position:relative;
+	top: 120px;
+	left:0;
+	background: #000;
+	color: #FF5722;
+	font-family: "Poppins", arial, sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	padding: 20px 0;
+	visibility:hidden;
+}
+.portfolio-section #project2:hover .description {
+	visibility: visible;
+}
+
+.portfolio-section #project3 {
+	height: 400px;
+	width: 80%;
+	margin: 50px auto;
+	background-image: url("../images/startup-matchmaker-deliverable.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.portfolio-section #project3 .description {
+	position:relative;
+	top: 120px;
+	left:0;
+	background: #000;
+	color: #FF5722;
+	font-family: "Poppins", arial, sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	padding: 20px 0;
+	visibility:hidden;
+}
+.portfolio-section #project3:hover .description {
+	visibility: visible;
+}
